@@ -119,6 +119,7 @@
       <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
       <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -146,7 +147,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart.StartNode>
-        <x:Reference>__ReferenceID7</x:Reference>
+        <x:Reference>__ReferenceID10</x:Reference>
       </Flowchart.StartNode>
       <FlowStep>
         <sap:WorkflowViewStateService.ViewState>
@@ -400,7 +401,7 @@
       <x:Reference>__ReferenceID0</x:Reference>
       <x:Reference>__ReferenceID1</x:Reference>
       <x:Reference>__ReferenceID2</x:Reference>
-      <FlowStep x:Name="__ReferenceID7">
+      <FlowStep x:Name="__ReferenceID10">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">330,127.33333333333334</av:Point>
@@ -540,14 +541,14 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Flowchart.StartNode>
-              <x:Reference>__ReferenceID6</x:Reference>
+              <x:Reference>__ReferenceID9</x:Reference>
             </Flowchart.StartNode>
-            <FlowStep x:Name="__ReferenceID6">
+            <FlowStep x:Name="__ReferenceID9">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">200,127.33333333333334</av:Point>
                   <av:Size x:Key="ShapeSize">200,25.333333333333332</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">300,152.66666666666669 300,206.66666666666666</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">300,152.66666666666669 300,182.66666666666669 300.3333333333333,182.66666666666669 300.3333333333333,316.6666666666667</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:InputDialog Label="{x:Null}" Options="{x:Null}" OptionsString="{x:Null}" DisplayName="&quot;Solicitar edad&quot; " sap:VirtualizedContainerService.HintSize="200,25.333333333333332" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Title="¿Cual es tu edad ?">
@@ -561,59 +562,124 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InputDialog>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID3" DisplayName="Decisión de flujo" sap:VirtualizedContainerService.HintSize="94,86.66666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-                  <FlowDecision.Condition>
-                    <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="Int32.Parse(varRespuestaUsuario) &gt;= 18" />
-                  </FlowDecision.Condition>
+                <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID5" DisplayName="Cambio de flujo" sap:VirtualizedContainerService.HintSize="90.66666666666667,86.66666666666667" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
+                  <FlowSwitch.Default>
+                    <FlowStep x:Name="__ReferenceID6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">10,417.3333333333333</av:Point>
+                          <av:Size x:Key="ShapeSize">200,25.333333333333332</av:Size>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="200,25.333333333333332" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Opción fuera de rango&quot;]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:LogMessage>
+                    </FlowStep>
+                  </FlowSwitch.Default>
+                  <FlowSwitch.Expression>
+                    <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="int32.Parse(varRespuestaUsuario)" />
+                  </FlowSwitch.Expression>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <av:Point x:Key="ShapeLocation">253,206.66666666666666</av:Point>
-                      <av:Size x:Key="ShapeSize">94,86.66666666666667</av:Size>
-                      <av:PointCollection x:Key="TrueConnector">253,250 100,250 100,277.3333333333333</av:PointCollection>
-                      <av:PointCollection x:Key="FalseConnector">347,250 480,250 480,277.3333333333333</av:PointCollection>
+                      <av:Point x:Key="ShapeLocation">255,316.6666666666667</av:Point>
+                      <av:Size x:Key="ShapeSize">90.66666666666667,86.66666666666667</av:Size>
+                      <av:PointCollection x:Key="Default">255,360 110,360 110,417.3333333333333</av:PointCollection>
+                      <av:PointCollection x:Key="1Connector">345.6666666666667,360 480,360 480,387.3333333333333</av:PointCollection>
+                      <av:PointCollection x:Key="2Connector">345.6666666666667,381.6666666666667 375.6666666666667,381.6666666666667 375.6666666666667,497.33333333333337 420,497.33333333333337 420,527.3333333333334</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <FlowDecision.True>
-                    <FlowStep x:Name="__ReferenceID4">
+                  <FlowStep x:Key="1" x:Name="__ReferenceID7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">380,387.3333333333333</av:Point>
+                        <av:Size x:Key="ShapeSize">200,25.333333333333332</av:Size>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="200,25.333333333333332" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Hola&quot;]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">0,277.3333333333333</av:Point>
-                          <av:Size x:Key="ShapeSize">200,25.333333333333332</av:Size>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="200,25.333333333333332" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Eres mayor de edad&quot;]">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:LogMessage>
-                    </FlowStep>
-                  </FlowDecision.True>
-                  <FlowDecision.False>
-                    <FlowStep x:Name="__ReferenceID5">
+                    </ui:LogMessage>
+                  </FlowStep>
+                  <FlowStep x:Key="2" x:Name="__ReferenceID8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">320,527.3333333333334</av:Point>
+                        <av:Size x:Key="ShapeSize">200,25.333333333333332</av:Size>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="200,25.333333333333332" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Adios&quot;]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">380,277.3333333333333</av:Point>
-                          <av:Size x:Key="ShapeSize">200,25.333333333333332</av:Size>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="200,25.333333333333332" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Eres menor de edad&quot;]">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:LogMessage>
-                    </FlowStep>
-                  </FlowDecision.False>
-                </FlowDecision>
+                    </ui:LogMessage>
+                  </FlowStep>
+                </FlowSwitch>
               </FlowStep.Next>
             </FlowStep>
+            <FlowDecision DisplayName="Decisión de flujo" sap:VirtualizedContainerService.HintSize="94,86.66666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+              <FlowDecision.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="Int32.Parse(varRespuestaUsuario) &gt;= 18" />
+              </FlowDecision.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <av:Point x:Key="ShapeLocation">253,206.66666666666666</av:Point>
+                  <av:Size x:Key="ShapeSize">94,86.66666666666667</av:Size>
+                  <av:PointCollection x:Key="TrueConnector">253,250 100,250 100,277.3333333333333</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">347,250 480,250 480,277.3333333333333</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <FlowDecision.True>
+                <FlowStep x:Name="__ReferenceID3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">0,277.3333333333333</av:Point>
+                      <av:Size x:Key="ShapeSize">200,25.333333333333332</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="200,25.333333333333332" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Eres mayor de edad&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                </FlowStep>
+              </FlowDecision.True>
+              <FlowDecision.False>
+                <FlowStep x:Name="__ReferenceID4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">380,277.3333333333333</av:Point>
+                      <av:Size x:Key="ShapeSize">200,25.333333333333332</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="200,25.333333333333332" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Eres menor de edad&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                </FlowStep>
+              </FlowDecision.False>
+            </FlowDecision>
             <x:Reference>__ReferenceID3</x:Reference>
             <x:Reference>__ReferenceID4</x:Reference>
             <x:Reference>__ReferenceID5</x:Reference>
+            <x:Reference>__ReferenceID6</x:Reference>
+            <x:Reference>__ReferenceID7</x:Reference>
+            <x:Reference>__ReferenceID8</x:Reference>
           </Flowchart>
         </Sequence>
       </FlowStep>
