@@ -1,0 +1,268 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="InteraccionWeb" this:InteraccionWeb.In_Usuario="juanvelez@sura.com.co" this:InteraccionWeb.In_contraseña="123.Awdrgyjilp" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_Usuario" Type="InArgument(x:String)" />
+    <x:Property Name="In_contraseña" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1102,1394</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>UiPath.PDF</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.PDF.Activities.PDF</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Interaccion Web " sap:VirtualizedContainerService.HintSize="1112,1329.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_30">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Utilizar Navegador Firefox: Nueva pestaña" sap:VirtualizedContainerService.HintSize="1050,1218.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="Simulate" ScopeGuid="c399a7de-6cce-47a9-a517-83948b7340c8" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="1016,999.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_29">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="varBanderaAutentificacion" />
+              <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dtCursosEncontrados" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGoToUrl DisplayName="Ir a URL" sap:VirtualizedContainerService.HintSize="954,84.66666666666667" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="platzi.com" Version="V3" />
+            <uix:NCheckState DisplayName="Comprobar estado de aplicación 'Filtrar contenido'" Exists="[varBanderaAutentificacion]" sap:VirtualizedContainerService.HintSize="954,246.66666666666666" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="c399a7de-6cce-47a9-a517-83948b7340c8" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Aparece el destino" sap:VirtualizedContainerService.HintSize="450,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Sesión ya ha sido iniciada&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="No aparece el destino" sap:VirtualizedContainerService.HintSize="450,1194" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Iniciar sesión'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c399a7de-6cce-47a9-a517-83948b7340c8" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://platzi.com/" CvTextArea="1679, 165, 136, 21" CvTextArgument="Iniciar Sesion" CvType="Text" DesignTimeRectangle="1681, 160, 134, 34" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Iniciar sesión'" FullSelectorArgument="&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' aaname='Iniciar sesión' check:innerText='Iniciar Sesión' /&gt;" Guid="e9c0f6c0-f740-4170-88ef-56e608b84edb" InformativeScreenshot="2d571382592daa7d6a7c16e379ffc704.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Platzi: Plataforma de aprendizaje profesional online' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="1679, 165, 136, 21" CvTextArgument="Iniciar Sesion" CvType="Text" DesignTimeRectangle="1669, 153, 158, 48" ElementType="Button" FriendlyName="'Iniciar sesión'" FullSelectorArgument="&lt;webctrl aaname='Iniciar sesión ' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Iniciar sesión ' tag='BUTTON' type='' class='Button Button--medium Button--sky Button--primary Nav-header-mobileCtas-actions--login' check:innerText='Iniciar Sesión' /&gt;" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Escribir en 'Correo electrónico'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="c399a7de-6cce-47a9-a517-83948b7340c8" Text="[In_Usuario]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://platzi.com/login/?next=/" CvElementArea="733, 514, 476, 89" CvType="InputBox" DesignTimeRectangle="737, 518, 468, 84" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT email'" FullSelectorArgument="&lt;webctrl id='email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='' aaname='Correo electrónico' /&gt;" Guid="2c642213-9208-47b2-9be1-0ee5487b2680" InformativeScreenshot="391d327c2cd025fd5a297491d24da1a6.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Dashboard' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvElementArea="733, 514, 476, 89" CvType="InputBox" DesignTimeRectangle="761, 518, 204, 84" ElementType="Text" FriendlyName="'Correo electrónico'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Correo electrónico' check:innerText='Correo electrónico' /&gt;" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Continuar'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c399a7de-6cce-47a9-a517-83948b7340c8" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://platzi.com/login/?next=/" CvTextArea="893, 656, 108, 24" CvTextArgument="Continuar" CvType="Text" DesignTimeRectangle="737, 632, 468, 72" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Continuar'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='Button-module_Button__0OJEu Button--undefined Button--undefined' aaname='Continuar' check:innerText='Continuar' /&gt;" Guid="7c1d6965-11e2-4332-9996-fb47ed85840e" InformativeScreenshot="d57a0ceb5c8724c902283444f07354d0.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Dashboard' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvElementArea="734, 628, 472, 77" CvTextArea="893, 656, 108, 24" CvTextArgument="Continuar" CvType="Button" DesignTimeRectangle="895, 650, 104, 36" ElementType="Text" FriendlyName="'Continuar'" FullSelectorArgument="&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' aaname='Continuar' check:innerText='Continuar' /&gt;" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Escribir en 'Contraseña'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="c399a7de-6cce-47a9-a517-83948b7340c8" Text="[In_contraseña]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://platzi.com/login/?next=/" CvElementArea="734, 587, 474, 88" CvType="InputBox" DesignTimeRectangle="737, 590, 468, 84" DesignTimeScaleFactor="1.5" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='' aaname='Contraseña' /&gt;" Guid="51d86233-d347-4777-a5c8-4fb588a658f8" InformativeScreenshot="bd1394826f2388b6763ed4fd531ee008.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Dashboard' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvElementArea="734, 587, 474, 88" CvType="InputBox" DesignTimeRectangle="761, 590, 126, 84" ElementType="Text" FriendlyName="'Contraseña'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Contraseña' check:innerText='Contraseña' /&gt;" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Iniciar sesión'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c399a7de-6cce-47a9-a517-83948b7340c8" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://platzi.com/login/?next=/" CvElementArea="733, 700, 474, 77" CvTextArea="899, 726, 142, 26" CvTextArgument="Iniciar sesion" CvType="Button" DesignTimeRectangle="737, 704, 468, 72" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Iniciar sesión'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='Button-module_Button__0OJEu Button--undefined Button--undefined' aaname='Iniciar sesión' check:innerText='Iniciar sesión' /&gt;" Guid="20fef9ad-3758-4472-9e95-2352684bc53f" InformativeScreenshot="781016920a2a3200d2cc9e7a8f8a66dc.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Dashboard' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvElementArea="733, 700, 474, 77" CvTextArea="899, 726, 142, 26" CvTextArgument="Iniciar sesion" CvType="Button" DesignTimeRectangle="901, 722, 141, 36" ElementType="Text" FriendlyName="'Iniciar sesión'" FullSelectorArgument="&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' aaname='Iniciar sesión' check:innerText='Iniciar sesión' /&gt;" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://platzi.com/new-home/" CvTextArea="464, 281, 283, 22" CvTextArgument="Filtrar contenido por escuela" CvType="Text" DesignTimeRectangle="446, 261, 811, 66" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Filtrar contenido'" FullSelectorArgument="&lt;webctrl aria-role='combobox' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='combobox' tag='BUTTON' type='button' class='Select-trigger SchoolSelector' aaname='Filtrar contenido por escuela' check:innerText='Filtrar contenido por escuela' /&gt;" Guid="598940bd-7445-4e3e-89fe-8eb812b9edd0" InformativeScreenshot="ad01fad01dab1039e23bf37e45cc0ee6.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='*Platzi*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvElementArea="443, 259, 817, 69" CvType="InputBox" DesignTimeRectangle="465, 279, 283, 28" ElementType="Text" FriendlyName="'Filtrar contenido'" FullSelectorArgument="&lt;webctrl parentid='MainLayout' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='MainLayout' tag='SPAN' type='' class='' aaname='Filtrar contenido por escuela' check:innerText='Filtrar contenido por escuela' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NGoToUrl DisplayName="Ir a URL" sap:VirtualizedContainerService.HintSize="954,84.66666666666667" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="https://platzi.com/buscar/?search=power%20bi" Version="V3" />
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtCursosEncontrados]" DisplayName="Extraer datos de tabla" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Nueva columna 0' ReferenceName='Column0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Nueva columna 0 Url' ReferenceName='Column1'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext' name2='Column1' attr2='href'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="954,160" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="1000" ScopeIdentifier="c399a7de-6cce-47a9-a517-83948b7340c8" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://platzi.com/buscar/?search=power%20bi%20&amp;objecttype=course" DesignTimeRectangle="280, 427, 1356, 1614" DesignTimeScaleFactor="1.5" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl parentid='search' tag='UL' /&gt;" Guid="d4d542d5-484c-4eb9-aac2-676ed69553fd" InformativeScreenshot="dab5e520803cc8c43be24b771b8c9c16.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Respuesta a la búsqueda' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="954,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[dtCursosEncontrados.RowCount.ToString]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1176" BrowserType="Firefox" IconBase64="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" InformativeScreenshot="b3110755e408e8de87bebccb222f15c8.png" Selector="&lt;html app='firefox.exe' title='Nueva pestaña' /&gt;" Title="Nueva pestaña" Url="about:home" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
